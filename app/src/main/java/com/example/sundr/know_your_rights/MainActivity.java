@@ -48,4 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void changelayout(View view){
+        setContentView(R.layout.);
+    }
 }
