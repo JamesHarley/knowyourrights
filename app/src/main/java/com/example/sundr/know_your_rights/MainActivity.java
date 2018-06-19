@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.menu);
         TextView maintext = (TextView)findViewById(R.id.alltext);
 
-        maintext.setText(Html.fromHtml(getString(R.string.all_text)));
+       // maintext.setText(Html.fromHtml(getString(R.string.all_text)));
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            changelayout(findViewById(id));
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
     public void changelayout(View view){
-        setContentView(R.layout.);
+        setContentView(R.layout.activity_main);
     }
+
 }
