@@ -24,14 +24,16 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-
+                    //TODO Change this to a method
+                    setContentView(R.layout.activity_main);
+                    TextView maintext = (TextView)findViewById(R.id.alltext);
+                    maintext.setText(Html.fromHtml(getString(R.string.declaration)));
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    setContentView(R.layout.index);
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                    //mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
             return false;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
-
+    //TODO Create a onclickeneventlistenter method for all buttons and load from xml
     final Button Decl = findViewById(R.id.decl);
     Decl.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
