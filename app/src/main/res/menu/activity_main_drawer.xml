@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+
+        <item
+            android:id="@+id/decl"
+            android:icon="@drawable/flag"
+            android:title="Declaration of Independence"
+            />
+
+        <item android:title="Constitution">
+            <menu>
+              <item
+                    android:id="@+id/alltext"
+                    android:icon="@drawable/flag"
+                    android:title="All Text"
+                    />
+                <item
+                    android:id="@+id/preamble"
+                    android:icon="@drawable/flag"
+                    android:title="Preamble"
+                    />
+                <item
+                    android:id="@+id/art1"
+                    android:icon="@drawable/flag"
+                    android:title="Article I"
+                    />
+                <item
+                    android:id="@+id/art2"
+                    android:icon="@drawable/flag"
+                    android:title="Article II"
+                    />
+                <item
+                    android:id="@+id/art3"
+                    android:icon="@drawable/flag"
+                    android:title="Article III"
+                    />
+
+                <item
+                    android:id="@+id/art4"
+                    android:icon="@drawable/flag"
+                    android:title="Article IV"
+                    />
+
+                <item
+                    android:id="@+id/art5"
+                    android:icon="@drawable/flag"
+                    android:title="Article V"
+                    />
+
+                <item
+                    android:id="@+id/art6"
+                    android:icon="@drawable/flag"
+                    android:title="Article VI"
+                    />
+
+                <item
+                    android:id="@+id/art7"
+                    android:icon="@drawable/flag"
+                    android:title="Article VII"
+                    />
+
+                <item
+                    android:id="@+id/amd1"
+                    android:icon="@drawable/flag"
+                    android:title="Amendment I-X"
+                    />
+                <item
+                    android:id="@+id/amd2"
+                    android:icon="@drawable/flag"
+                    android:title="Amendment XI-XX"
+                    />
+
+                <item
+                    android:id="@+id/amd3"
+                    android:icon="@drawable/flag"
+                    android:title="Amendment XXI-XXVII"
+                    />
+            </menu>
+        </item>
+
+
+</menu>
