@@ -20,6 +20,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.text.Html;
 import android.widget.Button;
+import android.content.Intent;
+
 
 public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
     int once = 0;
@@ -86,7 +88,9 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     @Override
     public void onBackPressed() {
         if(findViewById(R.id.activity_main).getVisibility() == View.VISIBLE){
-            setContentView(R.layout.index);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+
             return;
         }else{
             super.onBackPressed();
@@ -105,6 +109,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         }else if (id == R.id.alltext) {
             maintext.setText(Html.fromHtml(getString(R.string.all_text)));
+        } else if (id == R.id.preamble) {
+            maintext.setText(Html.fromHtml(getString(R.string.preamble)));
         } else if (id == R.id.art1) {
             maintext.setText(Html.fromHtml(getString(R.string.cons_art1)));
         } else if (id == R.id.art2) {
