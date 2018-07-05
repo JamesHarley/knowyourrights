@@ -87,12 +87,21 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     //TODO FIX Back with new activity
     @Override
     public void onBackPressed() {
-        if(findViewById(R.id.activity_main).getVisibility() == View.VISIBLE){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+        Intent intent = new Intent(this, MainActivity.class);
+        if(findViewById(R.id.activity_main) != null){
+            if(findViewById(R.id.activity_main).getVisibility() == View.VISIBLE){
 
-            return;
-        }else{
+                startActivity(intent);
+
+                return;
+            }else{
+                super.onBackPressed();
+                return;
+            }
+
+        }
+        else{
+
             super.onBackPressed();
         }
 
