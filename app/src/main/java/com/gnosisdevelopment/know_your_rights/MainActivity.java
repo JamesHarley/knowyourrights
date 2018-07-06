@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.text.Html;
@@ -29,6 +30,11 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     private Intent registerIntent;
     private Intent statusIntent;
     private Intent pollingIntent;
+    private Intent aboutIntent;
+    private Intent repIntent;
+
+
+    private WebView maintext;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -53,10 +59,15 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
         registerIntent = new Intent(this, RegisterVote.class);
         statusIntent = new Intent(this, StatusVote.class);
         pollingIntent = new Intent(this, PollingVote.class);
-        super.onCreate(savedInstanceState);
+        aboutIntent = new Intent(this, About.class);
+        repIntent = new Intent(this, Representatives.class);
+        maintext = (WebView) findViewById(R.id.alltext);
+
         setContentView(R.layout.index);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -91,9 +102,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     }
     public void changelayout(View view){
         setContentView(R.layout.activity_main);
-        TextView maintext = (TextView)findViewById(R.id.alltext);
-
-        maintext.setText(Html.fromHtml(getString(R.string.all_text)));
+        startActivity(aboutIntent);
     }
     //TODO FIX Back with new activity
     @Override
@@ -121,9 +130,12 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         // Handle navigation view item clicks here.
 
         setContentView(R.layout.activity_main);
-        TextView maintext = (TextView)findViewById(R.id.alltext);
+        maintext = (WebView) findViewById(R.id.alltext);
+        maintext.setBackgroundColor(000);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        String summary = "";
+
         int id = item.getItemId();
 
         if (id == R.id.register_vote) {
@@ -137,48 +149,44 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             startActivity(pollingIntent);
             return true;
         }
+        if (id == R.id.rep) {
+            startActivity(repIntent);
+            return true;
+        }
         //Documents
         if (id == R.id.decl) {
-            getSupportActionBar().setTitle("Declaration of Independence");
-            maintext.setText(Html.fromHtml(getString(R.string.declaration)));
+            getSupportActionBar().setTitle(getString(R.string.dec_title));
+            summary  = getString(R.string.declaration);
+            maintext.loadData(summary, "text/html", null);
+            return true;
         }else if (id == R.id.alltext) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.all_text)));
+            
+          summary  = getString(R.string.all_text);
         } else if (id == R.id.preamble) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.preamble)));
+          summary  = getString(R.string.preamble);
         } else if (id == R.id.art1) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_art1)));
+          summary  = getString(R.string.cons_art1);
         } else if (id == R.id.art2) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_art2)));
+          summary  = getString(R.string.cons_art2);
         } else if (id == R.id.art3) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_art3)));
+          summary  = getString(R.string.cons_art3);
         } else if (id == R.id.art4) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_art4)));
+          summary  = getString(R.string.cons_art4);
         }else if (id == R.id.art5) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_art5)));
+          summary  = getString(R.string.cons_art5);
         }else if (id == R.id.art6) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_art6)));
+          summary  = getString(R.string.cons_art6);
         }else if (id == R.id.art7) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_art7)));
+          summary  = getString(R.string.cons_art7);
         }else if (id == R.id.amd1) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_amend_1_10)));
+          summary  = getString(R.string.cons_amend_1_10);
         }else if (id == R.id.amd2) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_amend_11_20)));
+          summary  = getString(R.string.cons_amend_11_20);
         }else if (id == R.id.amd3) {
-            getSupportActionBar().setTitle("Constitution");
-            maintext.setText(Html.fromHtml(getString(R.string.cons_amend_21_27)));
+          summary  = getString(R.string.cons_amend_21_27);
         }
-
+        getSupportActionBar().setTitle(getString(R.string.cons_title));
+        maintext.loadData(summary, "text/html", null);
         return true;
     }
 }

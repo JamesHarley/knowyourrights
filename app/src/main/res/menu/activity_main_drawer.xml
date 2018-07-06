@@ -8,18 +8,23 @@
             <menu>
                 <item
                     android:id="@+id/register_vote"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/capital_house"
                     android:title="Voter Registration"
                     />
                 <item
                     android:id="@+id/status_vote"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/capital_house"
                     android:title="Voter Registration Status"
                     />
                 <item
                     android:id="@+id/poll_vote"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/capital_house"
                     android:title="Voter Polling Location"
+                    />
+                <item
+                    android:id="@+id/rep"
+                    android:icon="@drawable/capital_house"
+                    android:title="Find Your Representatives"
                     />
             </menu>
         </item>
@@ -27,7 +32,7 @@
             <menu>
                 <item
                     android:id="@+id/decl"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Declaration of Independence"
                     />
             </menu>
@@ -38,68 +43,68 @@
             <menu>
               <item
                     android:id="@+id/alltext"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="All Text"
                     />
                 <item
                     android:id="@+id/preamble"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Preamble"
                     />
                 <item
                     android:id="@+id/art1"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Article I"
                     />
                 <item
                     android:id="@+id/art2"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Article II"
                     />
                 <item
                     android:id="@+id/art3"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Article III"
                     />
 
                 <item
                     android:id="@+id/art4"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Article IV"
                     />
 
                 <item
                     android:id="@+id/art5"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Article V"
                     />
 
                 <item
                     android:id="@+id/art6"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Article VI"
                     />
 
                 <item
                     android:id="@+id/art7"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Article VII"
                     />
 
                 <item
                     android:id="@+id/amd1"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Amendment I-X"
                     />
                 <item
                     android:id="@+id/amd2"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Amendment XI-XX"
                     />
 
                 <item
                     android:id="@+id/amd3"
-                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:icon="@drawable/notes"
                     android:title="Amendment XXI-XXVII"
                     />
             </menu>

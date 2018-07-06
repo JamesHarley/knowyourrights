@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cons_title">
-        Constitution of the United States of America
-    </string>
+
     <string name="preamble">
         <![CDATA[
         <b>United States of America 1789 (rev. 1992)</b><br /><br />
@@ -570,7 +568,7 @@
 
     <string name="all_text"><![CDATA[
 
-        <h1><u>Constitution United States of America 1789 (rev. 1992)</h1></u><br /><br />
+        <h1>Constitution United States of America 1789 (rev. 1992)</h1><br /><br />
         <h1><u>Preamble</h1></u>
         <br /><br />
         We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defense, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.
@@ -1112,7 +1110,7 @@
 
         <h1><u>Amendment XXVII</h1></u>
 
-        No law varying the compensation for the services of the Senators and Representatives shall take effect, until an election of Representatives shall have intervened.
+        No law varying the compensation for the services of the Senators and Representatives shall take effect, until an election of Representatives shall have intervened.<br /> <br />
         ]]>
     </string>
 </resources>
