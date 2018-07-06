@@ -14,12 +14,12 @@ public class PollingVote extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.sundr.know_your_rights.R.layout.activity_polling_vote);
-        Toolbar toolbar = (Toolbar) findViewById(com.example.sundr.know_your_rights.R.id.toolbar);
+        setContentView(R.layout.activity_polling_vote);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        WebView pollingWebView = (WebView) findViewById(com.example.sundr.know_your_rights.R.id.polling_voteWebView);
+        WebView pollingWebView = (WebView) findViewById(R.id.polling_voteWebView);
         pollingWebView.setWebViewClient(new MyBrowser());
 
         String summary = "<html><body>" +
@@ -56,8 +56,8 @@ public class PollingVote extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
-        if(findViewById(com.example.sundr.know_your_rights.R.id.polling_voteWebView) != null){
-            if(findViewById(com.example.sundr.know_your_rights.R.id.polling_voteWebView).getVisibility() == View.VISIBLE){
+        if(findViewById(R.id.polling_voteWebView) != null){
+            if(findViewById(R.id.polling_voteWebView).getVisibility() == View.VISIBLE){
 
                 startActivity(intent);
 

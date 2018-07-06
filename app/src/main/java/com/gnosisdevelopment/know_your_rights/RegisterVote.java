@@ -14,12 +14,12 @@ public class RegisterVote extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.sundr.know_your_rights.R.layout.activity_register_vote);
-        Toolbar toolbar = (Toolbar) findViewById(com.example.sundr.know_your_rights.R.id.toolbar);
+        setContentView(R.layout.activity_register_vote);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        WebView registerWebView = (WebView) findViewById(com.example.sundr.know_your_rights.R.id.register_vote_WebView);
+        WebView registerWebView = (WebView) findViewById(R.id.register_vote_WebView);
         registerWebView.setWebViewClient(new MyBrowser());
 
         String url = "https://register.vote.org/?partner=111111&campaign=free-tools";
@@ -41,8 +41,8 @@ public class RegisterVote extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
-        if(findViewById(com.example.sundr.know_your_rights.R.id.register_vote_WebView) != null){
-            if(findViewById(com.example.sundr.know_your_rights.R.id.register_vote_WebView).getVisibility() == View.VISIBLE){
+        if(findViewById(R.id.register_vote_WebView) != null){
+            if(findViewById(R.id.register_vote_WebView).getVisibility() == View.VISIBLE){
 
                 startActivity(intent);
 
