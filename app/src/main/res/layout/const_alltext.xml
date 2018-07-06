@@ -13,6 +13,7 @@ tools:showIn="@layout/activity_register_vote">
         android:layout_height="fill_parent">
 
         <TextView
+            android:layout_marginTop="20dp"
             android:textAlignment="gravity"
             android:textStyle="bold"
             android:textColor="@android:color/black"

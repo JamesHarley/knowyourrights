@@ -1,4 +1,4 @@
-package com.example.sundr.know_your_rights;
+package com.gnosisdevelopment.know_your_rights;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -139,30 +139,43 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         }
         //Documents
         if (id == R.id.decl) {
+            getSupportActionBar().setTitle("Declaration of Independence");
             maintext.setText(Html.fromHtml(getString(R.string.declaration)));
         }else if (id == R.id.alltext) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.all_text)));
         } else if (id == R.id.preamble) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.preamble)));
         } else if (id == R.id.art1) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_art1)));
         } else if (id == R.id.art2) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_art2)));
         } else if (id == R.id.art3) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_art3)));
         } else if (id == R.id.art4) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_art4)));
         }else if (id == R.id.art5) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_art5)));
         }else if (id == R.id.art6) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_art6)));
         }else if (id == R.id.art7) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_art7)));
         }else if (id == R.id.amd1) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_amend_1_10)));
         }else if (id == R.id.amd2) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_amend_11_20)));
         }else if (id == R.id.amd3) {
+            getSupportActionBar().setTitle("Constitution");
             maintext.setText(Html.fromHtml(getString(R.string.cons_amend_21_27)));
         }
 
