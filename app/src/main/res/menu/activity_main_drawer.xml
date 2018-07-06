@@ -7,7 +7,7 @@
 
         <item
             android:id="@+id/decl"
-            android:icon="@drawable/flag"
+            android:icon="@drawable/ic_dashboard_black_24dp"
             android:title="Declaration of Independence"
             />
 
@@ -15,70 +15,79 @@
             <menu>
               <item
                     android:id="@+id/alltext"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="All Text"
                     />
                 <item
                     android:id="@+id/preamble"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Preamble"
                     />
                 <item
                     android:id="@+id/art1"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Article I"
                     />
                 <item
                     android:id="@+id/art2"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Article II"
                     />
                 <item
                     android:id="@+id/art3"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Article III"
                     />
 
                 <item
                     android:id="@+id/art4"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Article IV"
                     />
 
                 <item
                     android:id="@+id/art5"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Article V"
                     />
 
                 <item
                     android:id="@+id/art6"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Article VI"
                     />
 
                 <item
                     android:id="@+id/art7"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Article VII"
                     />
 
                 <item
                     android:id="@+id/amd1"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Amendment I-X"
                     />
                 <item
                     android:id="@+id/amd2"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Amendment XI-XX"
                     />
 
                 <item
                     android:id="@+id/amd3"
-                    android:icon="@drawable/flag"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
                     android:title="Amendment XXI-XXVII"
                     />
+            </menu>
+        </item>
+        <item android:title="Register To Vote">
+            <menu>
+                <item
+                android:id="@+id/register_vote"
+                android:icon="@drawable/ic_dashboard_black_24dp"
+                android:title="Voter Registration"
+                />
             </menu>
         </item>
 

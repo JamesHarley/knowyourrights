@@ -26,6 +26,9 @@ import android.content.Intent;
 public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
     int once = 0;
     private TextView mTextMessage;
+    private Intent registerIntent;
+
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -49,11 +52,16 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        registerIntent = new Intent(this, RegisterVote.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         //TODO Create a onclickeneventlistenter method for all buttons and load from xml
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -108,14 +116,19 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     }
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
         setContentView(R.layout.activity_main);
         TextView maintext = (TextView)findViewById(R.id.alltext);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         int id = item.getItemId();
+        if (id == R.id.register_vote) {
+            startActivity(registerIntent);
 
+            return true;
+        }
         if (id == R.id.decl) {
             maintext.setText(Html.fromHtml(getString(R.string.declaration)));
-
-
         }else if (id == R.id.alltext) {
             maintext.setText(Html.fromHtml(getString(R.string.all_text)));
         } else if (id == R.id.preamble) {
