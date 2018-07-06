@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     int once = 0;
     private TextView mTextMessage;
     private Intent registerIntent;
-
+    private Intent statusIntent;
+    private Intent pollingIntent;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         registerIntent = new Intent(this, RegisterVote.class);
+        statusIntent = new Intent(this, StatusVote.class);
+        pollingIntent = new Intent(this, PollingVote.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -122,11 +125,19 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         int id = item.getItemId();
+
         if (id == R.id.register_vote) {
             startActivity(registerIntent);
-
+            return true;
+        }if
+         (id == R.id.status_vote) {
+            startActivity(statusIntent);
+            return true;
+        }if (id == R.id.poll_vote) {
+            startActivity(pollingIntent);
             return true;
         }
+        //Documents
         if (id == R.id.decl) {
             maintext.setText(Html.fromHtml(getString(R.string.declaration)));
         }else if (id == R.id.alltext) {

@@ -4,12 +4,35 @@
     tools:showIn="navigation_view">
 
 
+        <item android:title="Vote">
+            <menu>
+                <item
+                    android:id="@+id/register_vote"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:title="Voter Registration"
+                    />
+                <item
+                    android:id="@+id/status_vote"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:title="Voter Registration Status"
+                    />
+                <item
+                    android:id="@+id/poll_vote"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:title="Voter Polling Location"
+                    />
+            </menu>
+        </item>
+        <item android:title="Founding document">
+            <menu>
+                <item
+                    android:id="@+id/decl"
+                    android:icon="@drawable/ic_dashboard_black_24dp"
+                    android:title="Declaration of Independence"
+                    />
+            </menu>
+        </item>
 
-        <item
-            android:id="@+id/decl"
-            android:icon="@drawable/ic_dashboard_black_24dp"
-            android:title="Declaration of Independence"
-            />
 
         <item android:title="Constitution">
             <menu>
@@ -81,15 +104,7 @@
                     />
             </menu>
         </item>
-        <item android:title="Register To Vote">
-            <menu>
-                <item
-                android:id="@+id/register_vote"
-                android:icon="@drawable/ic_dashboard_black_24dp"
-                android:title="Voter Registration"
-                />
-            </menu>
-        </item>
+
 
 
 </menu>
